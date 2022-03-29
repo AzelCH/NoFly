@@ -1,0 +1,10 @@
+---
+##NoFly Configuration
+##Permission: nofly.bypass
+
+#Options: true/false
+enable: true
+
+#Message sent to the player after being kicked
+kick-message: "§cflying is not allowed on this server!"
+...
