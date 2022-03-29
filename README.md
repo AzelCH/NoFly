@@ -28,3 +28,6 @@ enable: true
 kick-message: "§cflying is not allowed on this server!"
 ...
 ```
+
+# CREDIT
+Icon: https://flaticon.com
