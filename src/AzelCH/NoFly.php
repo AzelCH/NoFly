@@ -9,7 +9,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerToggleFlightEvent;
 use pocketmine\utils\Config;
 
-class Main extends PluginBase implements Listener {
+class NoFly extends PluginBase implements Listener {
   
   public function onEnable(): void{
     $this->saveResource("config.yml");
