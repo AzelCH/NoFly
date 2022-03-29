@@ -1,3 +1,6 @@
+[![](https://poggit.pmmp.io/shield.state/NoFly)](https://poggit.pmmp.io/p/NoFly)
+<a href="https://poggit.pmmp.io/p/NoFly"><img src="https://poggit.pmmp.io/shield.state/NoFly"></a>
+
 # NoFly
 NoFly is a PocketMine-MP plugin that doesn't allow the player to fly
 
@@ -29,5 +32,5 @@ kick-message: "§cflying is not allowed on this server!"
 ...
 ```
 
-# CREDIT
+# Credit
 Icon: https://flaticon.com
