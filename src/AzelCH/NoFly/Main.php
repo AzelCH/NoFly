@@ -2,26 +2,27 @@
 
 namespace AzelCH\NoFly;
 
-use pocketmine\Server;
-use pocketmine\player\Player;
-use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerToggleFlightEvent;
-use pocketmine\utils\Config;
+use pocketmine\player\GameMode;
+use pocketmine\plugin\PluginBase;
 
-class Main extends PluginBase implements Listener {
-  
-  public function onEnable(): void{
-    $this->saveResource("config.yml");
-    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-  }
-  
-  public function toggleFlight(PlayerToggleFlightEvent $event){
-    $player = $event->getPlayer();
-    if($this->getConfig()->get("enable") === true){
-      if(!$player->hasPermission("nofly.bypass")){
-        $player->kick($this->getConfig()->get("kick-message"));
-      }
+class Main extends PluginBase implements Listener
+{
+
+    public function onEnable(): void
+    {
+        $this->saveResource("config.yml");
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
-  }
+
+    public function toggleFlight(PlayerToggleFlightEvent $event): void
+    {
+        $player = $event->getPlayer();
+        if ($this->getConfig()->get("enable") === true) {
+            if (!$player->hasPermission("nofly.bypass") || ($this->getConfig()->get("Allow-Spectator") === false && $player->getGamemode() === GameMode::SPECTATOR())) {
+                $player->kick($this->getConfig()->get("kick-message"));
+            }
+        }
+    }
 }
