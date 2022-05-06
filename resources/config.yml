@@ -5,6 +5,10 @@
 #Options: true/false
 enable: true
 
+#Options: true/false
+#this one will make spectator can fly
+Allow-Spectator: false
+
 #Message sent to the player after being kicked
 kick-message: "§cflying is not allowed on this server!"
 ...
